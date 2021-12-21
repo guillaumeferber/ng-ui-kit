@@ -13,6 +13,13 @@
     "watch": "npm run prebuild && ng build --watch --configuration development",
     "test": "ng test"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/guillaumeferber/ng-ui-kit"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/@guillaumeferber"
+  },
   "author": "Guillaume Ferber",
   "license": "MIT",
   "private": true,

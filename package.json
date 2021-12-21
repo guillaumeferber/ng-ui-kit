@@ -1,13 +1,20 @@
 {
   "name": "ng-ui-kit",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
-    "watch": "ng build --watch --configuration development",
+    "start": "ng serve -o",
+    "prebuild": "rm -Rf dist/",
+    "updateVersion": "cd ./projects/ng-ui-kit && npm version patch",
+    "build": "ng build ng-ui-kit",
+    "build:publish": "npm run prebuild && npm run updateVersion && npm run build && npm run postbuild && npm run publish && npm run prebuild",
+    "postbuild": "cp .npmrc dist/auth",
+    "publish": "cd dist/auth/ && npm publish",
+    "watch": "npm run prebuild && ng build --watch --configuration development",
     "test": "ng test"
   },
+  "author": "Guillaume Ferber",
+  "license": "MIT",
   "private": true,
   "dependencies": {
     "@angular/animations": "~12.0.4",
@@ -23,6 +30,7 @@
     "zone.js": "~0.11.4"
   },
   "devDependencies": {
+    "@angular-devkit/build-angular": "~12.0.5",
     "@angular/cli": "~12.0.4",
     "@angular/compiler-cli": "~12.0.4",
     "@types/jasmine": "~3.6.0",
@@ -33,6 +41,7 @@
     "karma-coverage": "~2.0.3",
     "karma-jasmine": "~4.0.0",
     "karma-jasmine-html-reporter": "^1.5.0",
+    "ng-packagr": "^12.0.0",
     "typescript": "~4.2.3"
   }
 }

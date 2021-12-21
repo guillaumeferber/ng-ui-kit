@@ -21,7 +21,7 @@
   },
   "author": "Guillaume Ferber <ferber.g@gmail.com> (http://guillaumeferber.com)",
   "license": "MIT",
-  "private": true,
+  "private": false,
   "dependencies": {
     "@angular/animations": "~12.0.4",
     "@angular/common": "~12.0.4",

@@ -1,5 +1,5 @@
 {
-  "name": "ng-ui-kit",
+  "name": "@guillaumeferber/ng-ui-kit",
   "version": "0.0.1",
   "scripts": {
     "ng": "ng",
@@ -7,9 +7,8 @@
     "prebuild": "rm -Rf dist/",
     "updateVersion": "cd ./projects/ng-ui-kit && npm version patch",
     "build": "ng build ng-ui-kit",
-    "build:publish": "npm run prebuild && npm run updateVersion && npm run build && npm run postbuild && npm run publish && npm run prebuild",
-    "postbuild": "cp .npmrc dist/auth",
-    "publish": "cd dist/auth/ && npm publish",
+    "build:publish": "npm run prebuild && npm run updateVersion && npm run build && npm run publish && npm run prebuild",
+    "publish": "cd dist/ng-ui-kit/ && npm publish",
     "watch": "npm run prebuild && ng build --watch --configuration development",
     "test": "ng test"
   },
@@ -18,9 +17,9 @@
     "url": "git+https://github.com/guillaumeferber/ng-ui-kit"
   },
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/@guillaumeferber"
+    "@guillaumeferber:registry": "https://npm.pkg.github.com"
   },
-  "author": "Guillaume Ferber",
+  "author": "Guillaume Ferber <ferber.g@gmail.com> (http://guillaumeferber.com)",
   "license": "MIT",
   "private": true,
   "dependencies": {

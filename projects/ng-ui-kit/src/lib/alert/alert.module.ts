@@ -13,4 +13,4 @@ import { AlertComponent } from './alert.component';
         AlertComponent
     ]
 })
-export declare class AlertModule { }
+export class AlertModule { }

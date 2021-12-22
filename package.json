@@ -1,6 +1,6 @@
 {
   "name": "@guillaumeferber/ng-ui-kit",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "scripts": {
     "ng": "ng",
     "start": "ng serve -o",

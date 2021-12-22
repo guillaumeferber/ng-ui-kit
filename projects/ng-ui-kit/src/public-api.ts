@@ -4,8 +4,7 @@
 // directives
 export * from './lib/directives/drag-and-drop.directive';
 // components
-export * from './lib/alert/alert.module';
-export * from './lib/alert/alert.component';
+export * from './lib/alert/public_api';
 export * from './lib/badge/badge.module';
 export * from './lib/badge/badge.component';
 export * from './lib/badge/badge.module';

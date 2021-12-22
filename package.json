@@ -8,7 +8,7 @@
     "updateVersion": "cd ./projects/ng-ui-kit && npm version patch",
     "build": "ng build ng-ui-kit",
     "build:publish": "npm run prebuild && npm version patch && npm run updateVersion && npm run build && npm run publish && npm run prebuild",
-    "publish": "cp .npmrc ./dist/ng-ui-kit && cd dist/ng-ui-kit/ && npm publish",
+    "publish": "cd dist/ng-ui-kit/ && npm publish",
     "watch": "npm run prebuild && ng build --watch --configuration development",
     "test": "ng test"
   },

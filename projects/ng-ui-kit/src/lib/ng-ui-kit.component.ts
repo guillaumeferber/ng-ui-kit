@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
     <p>
       ng-ui-kit works!
     </p>
+    <app-alert>toto</app-alert>
   `,
   styles: [
   ]

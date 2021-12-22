@@ -1,0 +1,4 @@
+<fieldset [ngClass]="['c-input', 'c-input--' + type]">
+  <input (focus)="focusHandler()" (click)="clickedHandler()" (blur)="blurredHandler()" #input [formControl]="control" [attr.name]="name" [attr.type]="type" [attr.pattern]="pattern" />
+  <label class="c-input__label" [attr.for]="name">{{label}}</label>
+</fieldset>

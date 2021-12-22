@@ -1,0 +1,9 @@
+<div class="c-dropdown">
+    <input type="checkbox" #checkbox>
+    <label #label class="c-dropdown__menu">
+        <span class="c-dropdown__icon">&#8942;</span>
+    </label>
+    <div #insideElement class="c-dropdown__action" [ngClass]="orientation">
+        <ng-content></ng-content>
+    </div>
+</div>

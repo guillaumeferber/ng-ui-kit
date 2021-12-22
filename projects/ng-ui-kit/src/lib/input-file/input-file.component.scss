@@ -1,0 +1,65 @@
+.c-dnd-box {
+  --background-color: var(--color-grey-200, #eee);
+  --border-width: .3rem;
+  background-color: var(--background-color);
+  transition: all .15s ease-out;
+  display: flex;
+  height: 25rem;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  border-style: dashed;
+  border-color: rgba(#2E3A59, .4);
+  border-width: var(--border-width);
+  border-radius: var(--default-border-radius, .6em);
+  cursor: pointer;
+  &.idle {
+    --background-color: var(--color-grey-200);
+    --border-width: .3rem;
+  }
+  &.is-dragover {
+    --background-color: var(--color-grey-300, #e0e0e0);
+    --border-width: .4rem;
+    label {
+      opacity: .4;
+    }
+  }
+
+    &__dragndrop,
+    &__uploading,
+    &__success,
+    &__error {
+      display: none;
+    }
+    label {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-transform: unset;
+      padding: 1rem 2rem;
+      background-color: var(--color-blue-400, #2979ff);
+      color: var(--color-white, #fff);
+      border-radius: var(--default-border-radius);
+      cursor: pointer;
+    }
+    &__input-button {
+      --background: var(--theme-button-raised-primary-background, #1F6BDC);
+      --foreground: var(--color-white, #fff);
+      display: none;
+      user-select: none;
+      pointer-events: none;
+      &:hover {
+          --background: var(--theme-button-raised-primary-hover-background, #1B5FC6);
+      }
+
+      &:focus,
+      &:active {
+        --background: var(--theme-button-raised-primary-focus-background, #1758B9);
+      }
+    }
+    &__result {
+      .igx-icon {
+        --size: var(--spacer-base, 2.4rem);
+      }
+    }
+}

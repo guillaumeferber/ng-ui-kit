@@ -1,0 +1,9 @@
+<div #alert [ngClass]="['c-alert', ('c-alert--' + level)]" role="alert">
+  <div class="c-alert__heading" *ngIf="title"><h5>{{title}}</h5></div>
+  <div class="c-alert__body">{{content}}</div>
+  <p class="c-alert__footer" *ngIf="footer">{{footer}}</p>
+  <div class="c-alert__close" *ngIf="dismissable">
+      <input type="checkbox" (click)="dismiss()"
+          id="c-alert--primary"><label for="c-alert--primary">&times;</label>
+  </div>
+</div>

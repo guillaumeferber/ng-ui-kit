@@ -1,0 +1,11 @@
+<fieldset appDragAndDrop (filesDropped)="onFilesDropped($event)" (dragEnter)="draggedEnterHandler()" (dragLeave)="dragEnterHandler()" class="c-dnd-box">
+  <span *ngIf="isDragging | async" class="u-d(flex) u-jc(center) u-ai(center)">Drop the file here</span>
+  <label *ngIf="(isDragging | async) === false" class="c-dnd-box__dragndrop" for="file-input">
+    <span class="u-pl(sm)">Ajouter un fichier</span>
+  </label>
+  <input #fileInput id="file-input" class="c-dnd-box__input-button" name="files" type="file" [attr.accept]="acceptedTypes"
+      (change)="processFile(fileInput.files)">
+</fieldset>
+<p *ngIf="selectedFile$ | async" class="u-mt-(sm) u-d(flex) u-ai(center) c-dnd-box__result">
+  <span class="u-pl(sm)">{{(selectedFile$ | async)?.file?.name}}</span>
+</p>

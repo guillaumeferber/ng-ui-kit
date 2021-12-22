@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { NgUiKitComponent } from './ng-ui-kit.component';
-
+import {AlertModule} from './alert/alert.module';
 
 
 @NgModule({
@@ -8,6 +8,7 @@ import { NgUiKitComponent } from './ng-ui-kit.component';
     NgUiKitComponent
   ],
   imports: [
+    AlertModule
   ],
   exports: [
     NgUiKitComponent

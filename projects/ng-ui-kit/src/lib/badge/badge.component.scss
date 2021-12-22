@@ -15,10 +15,12 @@ $status-list: (
 }
 
 .c-badge {
-    display: inline-block;
-    text-align: center;
-    padding: 4px 10px;
-    font-size: small;
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4px 10px;
+  line-height: 1.2;
     &--first { border-radius: 16px 0 0 16px }
     &--last { border-radius: 0 16px 16px 0 }
     &--rounded { border-radius: 16px }

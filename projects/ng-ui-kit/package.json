@@ -1,12 +1,12 @@
 {
   "name": "@guillaumeferber/ng-ui-kit",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/guillaumeferber/ng-ui-kit"
   },
   "publishConfig": {
-    "@guillaumeferber:registry": "https://npm.pkg.github.com"
+    "registry": "https://npm.pkg.github.com"
   },
   "author": "Guillaume Ferber <ferber.g@gmail.com> (http://guillaumeferber.com)",
   "license": "MIT",

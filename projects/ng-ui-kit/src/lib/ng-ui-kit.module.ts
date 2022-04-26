@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { BadgeModule } from '../public-api';
 import { NgUiKitComponent } from './ng-ui-kit.component';
 
 @NgModule({
@@ -6,6 +7,7 @@ import { NgUiKitComponent } from './ng-ui-kit.component';
     NgUiKitComponent
   ],
   imports: [
+    BadgeModule
   ],
   exports: [
     NgUiKitComponent

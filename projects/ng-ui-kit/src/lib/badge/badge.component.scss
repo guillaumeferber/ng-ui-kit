@@ -3,24 +3,25 @@ $status-list: (
     "error": #ff1744,
     "success": #00c853,
     "primary": #2979ff,
-    "secondary": #448aff
+    "secondary": #448aff,
+    "succeeded": rgba(0,200,83, 0.08)
 );
 
 @each $status, $color in $status-list {
     .c-badge--#{$status} {
-        $font-color: if(lightness($color) > 70, var(--color-company-primary, #000),  #fff);
+        $font-color: if(lightness($color) > 70, var(--color-compay-primary, #212529),  #fff);
+        $font-color: if(opacity($color) == 0.08, #00c853,  #fff);
         background: $color;
         color: $font-color;
     }
 }
 
 .c-badge {
-  font-size: 14px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 4px 10px;
-  line-height: 1.2;
+    display: inline-block;
+    text-align: center;
+    padding: 4px 10px;
+    font-size: small;
+    max-width: 20rem;
     &--first { border-radius: 16px 0 0 16px }
     &--last { border-radius: 0 16px 16px 0 }
     &--rounded { border-radius: 16px }

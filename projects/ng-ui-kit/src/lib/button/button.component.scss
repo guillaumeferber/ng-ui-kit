@@ -1,4 +1,6 @@
 :host {
+  --background: royalblue;
+  --foreground: white;
     &[pos="center"] {
         margin-left: auto;
         margin-right: auto;
@@ -14,8 +16,13 @@
 
     button {
         text-transform: unset;
-        min-height: 4rem;
-        padding: 1rem 2rem;
+        padding: 1em 2em;
+        background-color: var(--background);
+        color: var(--foreground);
+        border-radius: .6rem;
+        font-size: 1.4rem;
+        border: none;
+        outline: none;
         .igx-icon {
           font-size: var(--font-size-base, 1.6rem);
           line-height: inherit;
@@ -61,17 +68,17 @@
         }
 
         &.accent {
-            --background: var(--theme-button-raised-accent-background);
+            --background: var(--color-orange-400,#ff9100);
             --foreground: var(--color-black, #000);
 
             &:hover {
-                --hover-background: var(--theme-button-raised-accent-hover-background);
+                --hover-background: var(--color-orange-400,#ff9100);
                 --hover-foreground: var(--color-black, #000);
             }
 
             &:focus,
             &:active {
-              --focus-background: var(--theme-button-raised-accent-focus-background);
+              --focus-background: var(--color-orange-400,#ff9100);
               --focus-foreground: var(--color-black, #000);
             }
         }
